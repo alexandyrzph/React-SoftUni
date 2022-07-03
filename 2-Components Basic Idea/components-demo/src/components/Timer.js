@@ -1,13 +1,11 @@
-import React from "react";
+import { useState } from "react";
 
 export const Timer = (props) => {
-  const [time, setTime] = React.useState(0);
-
-  console.log(time);
+  let [time, setTime] = useState(Date.now());
 
   setTimeout(() => {
-    setTime(time + 1);
-  }, 20000000);
+    setTime(time => time = Date.now());
+  }, 1000);
 
   return (
     <div>
