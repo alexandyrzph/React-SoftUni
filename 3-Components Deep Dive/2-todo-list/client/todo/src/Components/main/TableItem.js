@@ -1,20 +1,13 @@
-export const TableItem = () => {
+export const TableItem = (props) => {
+  // console.log(props);
+  
   return (
-    <>
-      <tr className="todo is-completed">
-        <td>Give dog a bath</td>
-        <td>Complete</td>
-        <td className="todo-action">
-          <button>Change status</button>
-        </td>
-      </tr>
-      <tr className="todo">
-        <td>Vacuum floor</td>
-        <td>Incomplete</td>
-        <td className="todo-action">
-          <button>Change status</button>
-        </td>
-      </tr>
-    </>
+    <tr className={props.isCompleted ? "todo is-completed" : "todo"}>
+      <td>{props.text}</td>
+      <td>{props.isCompleted ? "Complete" : "Incomplete"}</td>
+      <td className="todo-action">
+        <button>Change status</button>
+      </td>
+    </tr>
   );
 };
