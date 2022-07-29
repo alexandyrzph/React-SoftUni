@@ -1,2 +1,2 @@
 # React-SoftUni
-Tasks and solutions from React course - SoftUni
+Tasks and solutions from React Course - SoftUni
